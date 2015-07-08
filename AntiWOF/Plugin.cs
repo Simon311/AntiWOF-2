@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace AntiWOF
 {
-	[ApiVersion(1, 16)]
+	[ApiVersion(1, 18)]
 	public class Plugin : TerrariaPlugin
 	{
 		public override Version Version

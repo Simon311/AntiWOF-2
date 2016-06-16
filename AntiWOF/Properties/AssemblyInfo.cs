@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Simon311")]
 [assembly: AssemblyProduct("AntiWOF-2")]
-[assembly: AssemblyCopyright("Copyright © Simon311 2014")]
+[assembly: AssemblyCopyright("Copyright © Simon311 2014-2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("1.0.0")]
-[assembly: AssemblyFileVersion("1.0.0")]
+[assembly: AssemblyVersion("1.1")]
+[assembly: AssemblyFileVersion("1.1")]

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace AntiWOF
 {
-	[ApiVersion(1, 18)]
+	[ApiVersion(1, 23)]
 	public class Plugin : TerrariaPlugin
 	{
 		public override Version Version
@@ -47,7 +47,7 @@ namespace AntiWOF
 		private void LootHook(NpcLootDropEventArgs e)
 		{
 			if (e == null || e.ItemId != 367) return;
-			Task.Factory.StartNew(() => UndoBox(e.X, e.Y, e.Width, e.Height)).LogExceptions();
+			Task.Factory.StartNew(() => UndoBox((int)e.Position.X, (int)e.Position.Y, e.Width, e.Height)).LogExceptions();
 		}
 
 		private void UndoBox(int X, int Y, int W, int H)
@@ -62,7 +62,7 @@ namespace AntiWOF
 				for (int l = num23 - num24; l <= num23 + num24; l++)
 				{
 					var tile = Main.tile[k, l];
-					if ((k == num22 - num24 || k == num22 + num24 || l == num23 - num24 || l == num23 + num24) && tile.active() && tile.type == 140)
+					if ((k == num22 - num24 || k == num22 + num24 || l == num23 - num24 || l == num23 + num24) && tile.active() && tile.type == (WorldGen.crimson ? 347 : 140))
 					{
 						tile.type = 0;
 						tile.active(false);
